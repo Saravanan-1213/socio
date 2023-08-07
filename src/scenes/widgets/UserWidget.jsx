@@ -22,7 +22,7 @@ const UserWidget = ({ userId, picturePath }) => {
   const main = palette.neutral.main;
 
   const getUser = async () => {
-  const response = await fetch(`http://localhost:4000/users/${userId}`,{
+  const response = await fetch(`https://backend-media-awft.onrender.com/users/${userId}`,{
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await response.json();
