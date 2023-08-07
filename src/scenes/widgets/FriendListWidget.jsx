@@ -11,20 +11,20 @@ const FriendListWidget = ({ userId }) => {
   const token = useSelector((state) => state.token);
   const friends = useSelector((state) => state.user.friends);
 
-  const getFriends = async () => {
-    const response = await fetch(`https://backend-media-awft.onrender.com/users/${userId}/friends`,
-       {
-        method: "GET",
-        headers: { Authorization: `Bearer ${token}` },
-      }
-    );
-    const data = await response.json();
-    dispatch(setFriends({ friends: data }));
-  };
+  // const getFriends = async () => {
+  //   const response = await fetch(`https://backend-media-awft.onrender.com/users/${userId}/friends`,
+  //      {
+  //       method: "GET",
+  //       headers: { Authorization: `Bearer ${token}` },
+  //     }
+  //   );
+  //   const data = await response.json();
+  //   dispatch(setFriends({ friends: data }));
+  // };
 
-  useEffect(() => {
-    getFriends();
-  }, []); 
+  // useEffect(() => {
+  //   getFriends();
+  // }, []); 
 
   return (
     <WidgetWrapper>

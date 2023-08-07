@@ -22,11 +22,11 @@ const UserWidget = ({ userId, picturePath }) => {
   const main = palette.neutral.main;
 
   const getUser = async () => {
-  const response = await fetch(`https://backend-media-awft.onrender.com/users/${userId}`,{
-      headers: { Authorization: `Bearer ${token}` },
-    });
-    const data = await response.json();
-    setUser(data);
+  // const response = await fetch(`https://backend-media-awft.onrender.com/users/${userId}`,{
+  //     headers: { Authorization: `Bearer ${token}` },
+  //   });
+  //   const data = await response.json();
+  //   setUser(data);
   };
 
   useEffect(() => {
